@@ -1,0 +1,30 @@
+.input-field {
+    /* Обычные стили поля ввода */
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+
+    /* Анимация фокуса */
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    /* Новый цвет рамки при фокусе */
+}
+
+.authContainer {
+
+    max-width: 400px;
+    /* Максимальная ширина контейнера */
+    margin: 0 auto;
+    /* Центрирование контейнера по горизонтали */
+    padding: 20px;
+    /* Внутренний отступ контейнера */
+    border: 1px solid #ccc;
+    /* Граница контейнера */
+    border-radius: 5px;
+    /* Скругление углов контейнера */
+    background-color: #f9f9f9;
+    /* Цвет фона контейнера */
+}

@@ -1,0 +1,37 @@
+@import './theme.module.css';
+
+.button {
+    /* Обычные стили кнопки */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* Анимация наведения */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    /* Новый цвет при наведении */
+}
+
+.button {
+    /* Обычные стили кнопки */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    /* Анимация нажатия */
+    transition: transform 0.3s ease;
+}
+
+.button:active {
+    transform: scale(0.95);
+    /* Масштабирование кнопки при нажатии */
+}

@@ -1,0 +1,21 @@
+/* Цвета */
+:root {
+    --main-color: #eee;
+    --primary-color: #cf92e2;
+    --secondary-color: #8511d3;
+    --accent-color: #bb12fd;
+}
+
+/* Шрифты */
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* Размеры */
+:root {
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 18px;
+
+}

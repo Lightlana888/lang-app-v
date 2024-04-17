@@ -1,0 +1,29 @@
+.wordList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-top: 90px;
+}
+
+.card-transition-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.card-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 500ms, transform 500ms;
+}
+
+.card-transition-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+т .card-transition-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 500ms, transform 500ms;
+}
