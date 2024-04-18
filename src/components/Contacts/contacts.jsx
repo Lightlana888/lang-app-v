@@ -1,13 +1,13 @@
 import React from 'react';
 import { FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
-
+import styles from './contacts.module.css';
 
 function Contacts() {
     return (
-        <div>
-            <FaTwitter /> {/* Иконка Twitter */}
-            <FaFacebook /> {/* Иконка Facebook */}
-            <FaInstagram /> {/* Иконка Instagram */}
+        <div className={styles.icons}>
+            <FaTwitter />
+            <FaFacebook />
+            <FaInstagram />
         </div>
     );
 }

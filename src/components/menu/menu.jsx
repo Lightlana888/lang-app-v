@@ -27,7 +27,7 @@ function Menu() {
                 animate={{ opacity: isOpen ? 1 : 0 }}
                 transition={{ duration: 1 }}
             >
-                <Link to="/home" onClick={closeMenu}>Главная</Link>
+                <Link to="/" onClick={closeMenu}>Главная</Link>
                 <Link to="/list" onClick={closeMenu}>Список слов</Link>
                 <Link to="/game" onClick={closeMenu}>Играть</Link>
             </motion.div>

@@ -6,13 +6,11 @@ import { Link } from 'react-router-dom';
 
 function Header() {
 
-    const handleClick = () => {
-
-    };
+    const handleClick = () => { };
 
     return (
         <header className={styles.header}>
-            <Link to="/home" onClick={handleClick} className={styles.logoLink}>
+            <Link to="/" onClick={handleClick} className={styles.logoLink}>
                 <img src={logo} alt="Логотип" className={styles.logo} />
             </Link>
             <div>Раскрой свой потенциал слово за словом!</div>

@@ -24,6 +24,10 @@
     margin-right: 2rem;
 }
 
+.addButton:hover {
+    background-color: var(--secondary-color);
+}
+
 .editButton,
 .saveButton,
 .deleteButton {

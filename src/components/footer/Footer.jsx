@@ -6,13 +6,11 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
 
-    const handleClick = () => {
-
-    };
+    const handleClick = () => { };
 
     return (
         <footer className={styles.footer}>
-            <Link to="/home" onClick={handleClick} className={styles.logoLink}>
+            <Link to="/" onClick={handleClick} className={styles.logoLink}>
                 <img src={logo} alt="Логотип" className={styles.logo} />
             </Link>
             <div>Подписывайся! Будем рады каждому!</div>
