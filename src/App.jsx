@@ -7,7 +7,7 @@ import WordList from './components/wordList/WordList';
 import Missing from './components/missing/Missing';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   Link
