@@ -19,11 +19,9 @@
     border-radius: 5px;
 }
 
-.links {
-    display: flex;
-    flex-direction: column;
-    margin-right: 3rem;
-}
+
+
+
 
 .menuContainer {
     position: relative;
@@ -41,10 +39,19 @@
     border-radius: 5px;
 }
 
+.menu a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.menu a:hover {
+    color: var(--secondary-color);
+
+}
 
 
 .menu.open {
-    color: #fff;
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
