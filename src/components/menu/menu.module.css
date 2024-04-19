@@ -33,17 +33,18 @@
     position: absolute;
     flex-direction: column;
     top: calc(100% + 20px);
+    color: #fff;
     left: 0;
     display: none;
     background-color: var(--primary-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 
 
 .menu.open {
-
+    color: #fff;
     display: flex;
     flex-direction: column;
     margin-right: 1rem;
