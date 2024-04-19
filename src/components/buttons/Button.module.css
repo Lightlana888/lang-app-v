@@ -11,9 +11,11 @@
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s ease;
+
 }
 
 .addButton {
@@ -60,9 +62,17 @@
     background-color: var(--accent-color);
 }
 
+
+.addButton:active,
+.editButton:active,
+.deleteButton:active,
+.saveButton:active,
+.cancelButton:active,
 .buttonPrev:active,
 .buttonNext:active,
-.checkButton:active {
+.checkButton:active,
+.buttonPlay:active,
+.buttonList:active {
     transform: scale(0.95);
 }
 
@@ -83,7 +93,7 @@
     color: #fff;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -95,17 +105,21 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    width: 30rem;
-    height: 5rem;
+    width: 25rem;
+    height: 4rem;
     margin: 15rem;
     transition: background-color 0.3s ease;
     font-size: 28px;
     border: 4px solid var(--accent-color);
+    align-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
 
 .buttonPlay:hover,
 .buttonList:hover {
     color: var(--secondary-color);
+    border-radius: 10px;
+
 }
 
 .buttonPlay:focus,

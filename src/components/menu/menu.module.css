@@ -31,17 +31,16 @@
 
 .menu {
     position: absolute;
-
     flex-direction: column;
-
     top: calc(100% + 20px);
-    /* Добавим небольшое расстояние от заголовка */
     left: 0;
     display: none;
     background-color: var(--primary-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 20px;
 }
+
+
 
 .menu.open {
 

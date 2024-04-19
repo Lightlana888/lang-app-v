@@ -6,7 +6,7 @@ import Button from '../buttons/Button';
 import WordList from '../wordList/WordList';
 import styles from './homePage.module.css';
 import buttonStyles from '../buttons/Button.module.css';
-
+import { Link } from 'react-router-dom';
 function HomePage() {
     const [showWordTable, setShowWordTable] = useState(false);
     const [showWordList, setShowWordList] = useState(false);
@@ -42,10 +42,11 @@ function HomePage() {
             {showWordTable && <WordTable />}
             {!showWordList && !showWordTable && (
                 <>
-                    <Button className={buttonStyles.buttonPlay} onClick={handlePlayButtonClick} buttonText="Играть"></Button>
-                    <Button className={buttonStyles.buttonList} onClick={handleWordListButtonClick} buttonText="Список слов"></Button>
+                    <Link to="/game" className={buttonStyles.buttonPlay} onClick={handlePlayButtonClick}>Играть</Link>
+                    <Link to="/list" className={buttonStyles.buttonList} onClick={handleWordListButtonClick}>Список слов</Link>
                 </>
             )}
+
         </div>
     );
 }
