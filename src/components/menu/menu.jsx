@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styles from './menu.module.css';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -14,6 +15,10 @@ function Menu() {
     const closeMenu = () => {
         setIsOpen(false);
     }
+
+    useEffect(() => {
+        closeMenu();
+    }, [location.pathname]);
 
     return (
         <div className={styles.menuContainer}>
@@ -34,5 +39,6 @@ function Menu() {
         </div>
     );
 }
+
 
 export default Menu;

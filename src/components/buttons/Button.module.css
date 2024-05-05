@@ -42,7 +42,7 @@
 }
 
 .checkButton {
-    background-color: var(--accent-color);
+    background-color: var(--primary-color);
     width: 90%;
     height: 5rem;
     margin: 10px 10px;
@@ -52,8 +52,8 @@
 
 .buttonPrev,
 .buttonNext {
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 
 .buttonPrev:hover,
@@ -62,6 +62,22 @@
     background-color: var(--accent-color);
 }
 
+.checkButton:focus {
+    outline: none;
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: var(--accent-color);
+
+    }
+
+    100% {
+        background-color: var(--primary-color);
+
+    }
+}
 
 .addButton:active,
 .editButton:active,

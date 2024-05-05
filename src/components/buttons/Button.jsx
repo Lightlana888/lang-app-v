@@ -1,17 +1,13 @@
-
 import React from 'react';
 
-
-function Button({ onClick, buttonText, className }) {
+const Button = React.forwardRef(({ onClick, buttonText, className }, ref) => {
     const handleClick = () => {
         onClick();
     };
 
     return (
-        <div>
-            <button className={className} onClick={handleClick}>{buttonText}</button>
-        </div>
+        <button ref={ref} className={className} onClick={handleClick}>{buttonText}</button>
     );
-}
+});
 
 export default Button;

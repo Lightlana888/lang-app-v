@@ -7,6 +7,8 @@ import WordList from '../wordList/WordList';
 import styles from './homePage.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { Link } from 'react-router-dom';
+
+
 function HomePage() {
     const [showWordTable, setShowWordTable] = useState(false);
     const [showWordList, setShowWordList] = useState(false);
@@ -20,6 +22,7 @@ function HomePage() {
         setShowWordTable(true);
         setShowWordList(false);
     };
+
 
 
     //const [isRegistered, setIsRegistered] = useState(true);
