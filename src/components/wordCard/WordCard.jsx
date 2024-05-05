@@ -14,9 +14,8 @@ function WordCard({ word, onCheckButtonClick }) {
     };
 
     useEffect(() => {
-        // Установка фокуса на кнопку "Проверить" после рендеринга компонента
         translationButtonRef.current.focus();
-    }, []); // Пустой массив завершает эффект после первого рендеринга
+    }, []);
 
 
     return (
