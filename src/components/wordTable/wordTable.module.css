@@ -49,3 +49,8 @@
     font-weight: bold;
 
 }
+
+.redBorder {
+    border: 2px solid red;
+
+}
