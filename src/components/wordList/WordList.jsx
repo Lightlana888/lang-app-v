@@ -8,7 +8,7 @@ import buttonStyles from '../buttons/Button.module.css';
 
 function WordList({ initialIndex }) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);
-    const [wordsLearned, setWordsLearned] = useState(0);
+    const [wordsLearned, setWordsLearned] = useState([]);
     const words = data.words;
 
     const handleNextWord = () => {
@@ -20,7 +20,13 @@ function WordList({ initialIndex }) {
     };
 
     const incrementWordsLearned = () => {
-        setWordsLearned((prevCount) => prevCount + 1);
+        const currentWord = words[currentIndex];
+        setWordsLearned((prevWordsLearned) => {
+            if (!prevWordsLearned.includes(currentWord)) {
+                return [...prevWordsLearned, currentWord];
+            }
+            return prevWordsLearned;
+        });
     };
 
 
@@ -41,7 +47,7 @@ function WordList({ initialIndex }) {
                     onCheckButtonClick={incrementWordsLearned}
                 />
                 <Button className={buttonStyles.buttonNext} onClick={handleNextWord} buttonText="→"></Button>
-                <div className={styles.wordsklearnedContainer}>Изучено слов: <span className={styles.wordsklearnedCounter}>{wordsLearned}</span></div>
+                <div className={styles.wordsklearnedContainer}>Изучено слов: <span className={styles.wordsklearnedCounter}>{wordsLearned.length}</span></div>
             </div >
 
         </>
