@@ -5,4 +5,14 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: "./",
+  server: {
+    proxy: {
+      // Проксирование всех запросов, начинающихся с '/api':
+      "/api": {
+        target: "http://itgirlschool.justmakeit.ru",
+        changeOrigin: true,
+      },
+    },
+  },
+
 })

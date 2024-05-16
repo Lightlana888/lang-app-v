@@ -12,6 +12,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { WordsProvider } from './components/wordsContext/WordsContext';
 
 
 
@@ -25,12 +26,14 @@ function App() {
 
       <div className="App">
         <Header />
-        <Routes>
-          <Route path="/list" element={<WordTable />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/game" element={<WordList />} />
-          <Route path="*" element={<Missing />} />
-        </Routes>
+        <WordsProvider>
+          <Routes>
+            <Route path="/list" element={<WordTable />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/game" element={<WordList />} />
+            <Route path="*" element={<Missing />} />
+          </Routes>
+        </WordsProvider>
         <Footer />
       </div>
 
