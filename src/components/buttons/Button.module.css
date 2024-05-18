@@ -43,14 +43,23 @@
 }
 
 .editButton,
-.saveButton,
-.deleteButton {
+.saveButton {
     background-color: var(--primary-color);
+}
+
+.editButton:hover,
+.saveButton:hover {
+    background-color: var(--secondary-color);
 }
 
 .deleteButton,
 .cancelButton {
     background-color: var(--secondary-color);
+}
+
+.deleteButton:hover,
+.cancelButton:hover {
+    background-color: var(--primary-color);
 }
 
 .checkButton {
@@ -127,8 +136,8 @@
 
 .buttonPlay,
 .buttonList {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
