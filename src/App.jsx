@@ -2,7 +2,7 @@ import './App.css';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import HomePage from './components/homePage/HomePage';
-import WordTable from './components/wordTable/WordTable';
+import WordTable from './components/wordTable/ui/WordTable';
 import WordList from './components/wordList/WordList';
 import Missing from './components/missing/Missing';
 

@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Button from '../buttons/Button';
+import Button from '../../../components/buttons/Button';
 import styles from './wordTable.module.css';
-import buttonStyles from '../buttons/Button.module.css';
-import { WordsContext } from '../../wordsContext/WordsContext';
+import buttonStyles from '../../buttons/Button.module.css';
+import { WordsContext } from '../../../wordsContext/WordsContext';
 
 function WordTable({ defaultValues }) {
     const { words, addWord, updateWord, deleteWord } = useContext(WordsContext);
