@@ -3,7 +3,7 @@ import WordCard from '../wordCard/WordCard';
 import styles from './wordList.module.css';
 import Button from '../buttons/Button';
 import buttonStyles from '../buttons/Button.module.css';
-import { WordsContext } from '../wordsContext/WordsContext';
+import { WordsContext } from '../../wordsContext/WordsContext';
 
 function WordList({ initialIndex }) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);

@@ -1,7 +1,5 @@
 .footer {
     width: 90vw;
-
-
     background-color: var(--main-color);
     color: var(--secondary-color);
     display: flex;

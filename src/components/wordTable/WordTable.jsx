@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import Button from '../buttons/Button';
 import styles from './wordTable.module.css';
 import buttonStyles from '../buttons/Button.module.css';
-import { WordsContext } from '../wordsContext/WordsContext';
+import { WordsContext } from '../../wordsContext/WordsContext';
 
 function WordTable({ defaultValues }) {
     const { words, addWord, updateWord, deleteWord } = useContext(WordsContext);
@@ -22,6 +22,8 @@ function WordTable({ defaultValues }) {
 
 
     const updateEmptyFields = () => {
+        if (!newWord) return;
+
         const updatedEmptyFields = {
             english: !newWord.english,
             transcription: !newWord.transcription,
@@ -72,6 +74,13 @@ function WordTable({ defaultValues }) {
 
     const handleChangeClick = (e, field) => {
         const { value } = e.target;
+
+
+        if (newWord && typeof newWord === 'object') {
+            const isEmpty = Object.values(newWord).some(value => value === '');
+            setSaveButtonDisabled(isEmpty);
+        }
+
         if (validateInput(value, field)) {
             setNewWord(prevState => ({
                 ...prevState,
@@ -83,9 +92,8 @@ function WordTable({ defaultValues }) {
         }
 
         updateEmptyFields();
-        const isEmpty = Object.values(newWord).some(value => value === '');
-        setSaveButtonDisabled(isEmpty);
     };
+
 
     const handleSaveNewWordClick = () => {
         updateEmptyFields();

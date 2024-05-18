@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
-import Loading from '../loading/Loading';
+import Loading from '../components/loading/Loading';
+import ErrorComponent from '../components/error/ErrorComponent';
 
 export const WordsContext = createContext();
 
@@ -20,9 +21,13 @@ export const WordsProvider = ({ children }) => {
             })
             .then(data => {
                 setWords(data);
+
                 setLoading(false);
             })
-            .catch(error => setError(error));
+            .catch(error => {
+                console.error(error);
+                setError(error)
+            });
     };
 
 
@@ -98,10 +103,10 @@ export const WordsProvider = ({ children }) => {
 
 
     useEffect(() => {
-        setLoading(true); // Установить loading в true перед началом загрузки
+        setLoading(true);
         const timer = setTimeout(() => {
             fetchWords();
-            setLoading(false); // Установить loading в false после завершения загрузки
+
         }, 3000);
 
         return () => clearTimeout(timer);
@@ -121,7 +126,12 @@ export const WordsProvider = ({ children }) => {
                 deleteWord
             }}>
 
-            {loading ? <Loading /> : children}
+            {error ? (
+                <ErrorComponent message="Похоже произошла ошибка загрузки данных с сервера. Пожалуйста, повторите попытку позже..." />
+            ) : (
+
+                loading ? <Loading /> : children
+            )}
         </WordsContext.Provider>
     );
 };
