@@ -1,13 +1,17 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
+import { observer } from 'mobx-react';
 import Button from '../../../components/buttons/Button';
-import styles from './wordTable.module.css';
+import styles from '../ui/wordTable.module.css';
 import buttonStyles from '../../buttons/Button.module.css';
-import { WordsContext } from '../../../wordsContext/WordsContext';
+import wordsStore from '../../../stores/wordsStore';
+import ErrorComponent from '../../error/ErrorComponent';
 
-function WordTable({ defaultValues }) {
-    const { words, addWord, updateWord, deleteWord } = useContext(WordsContext);
+
+const WordTable = observer(() => {
+
+
     const [editableWord, setEditableWord] = useState(null);
-    const [newWord, setNewWord] = useState(defaultValues);
+    const [newWord, setNewWord] = useState(null);
     const [showNewWordRow, setShowNewWordRow] = useState(false);
     const [emptyFields, setEmptyFields] = useState({
         english: false,
@@ -20,6 +24,10 @@ function WordTable({ defaultValues }) {
     const isLatin = (value) => /^[a-zA-Z\s[\],.:'"]*$/.test(value);
     const isCyrillic = (value) => /^[а-яА-ЯёЁ\s,.:'"]*$/.test(value);
 
+
+    useEffect(() => {
+        setNewWord({});
+    }, []);
 
     const updateEmptyFields = () => {
         if (!newWord) return;
@@ -43,38 +51,35 @@ function WordTable({ defaultValues }) {
         }
     };
 
-    useEffect(() => {
-        setNewWord(defaultValues);
-    }, [defaultValues]);
-
     const handleEditClick = (index) => {
+        const wordToEdit = wordsStore.words[index];
         setEditableWord(index);
-        setNewWord(words[index]);
+        setNewWord({ ...wordToEdit });
+
     };
 
     const handleSaveClick = (index) => {
-        updateWord(index, newWord);
+        wordsStore.updateWord(index, newWord);
         setEditableWord(null);
     };
 
     const handleCancelClick = () => {
         setEditableWord(null);
-        setNewWord(defaultValues);
         setShowNewWordRow(false);
+        setNewWord({});
     };
 
     const handleDeleteClick = (wordId) => {
-        deleteWord(wordId);
+        wordsStore.deleteWord(wordId);
     };
 
     const handleAddClick = () => {
         setShowNewWordRow(true);
-        setNewWord(defaultValues);
+        setNewWord({});
     };
 
     const handleChangeClick = (e, field) => {
         const { value } = e.target;
-
 
         if (newWord && typeof newWord === 'object') {
             const isEmpty = Object.values(newWord).some(value => value === '');
@@ -94,22 +99,30 @@ function WordTable({ defaultValues }) {
         updateEmptyFields();
     };
 
-
     const handleSaveNewWordClick = () => {
         updateEmptyFields();
         if (!newWord.english || !newWord.transcription || !newWord.russian || !newWord.tags) {
             setSaveButtonDisabled(true);
             console.log("Some fields are empty!");
         } else {
-            addWord(newWord);
-            setShowNewWordRow(false);
-            setSaveButtonDisabled(false);
-            console.log("New word saved successfully:", newWord);
+            wordsStore.addWord(newWord)
+                .then(() => {
+                    setSaveButtonDisabled(false);
+                    console.log("New word saved successfully:", newWord);
+                    setShowNewWordRow(false);
+                    setNewWord({});
+                })
+                .catch(error => {
+                    console.log('Failed to save new word:', newWord);
+                    setSaveButtonDisabled(true);
+                });
         }
     };
 
+
     return (
         <div className={styles.wordTableContainer}>
+
             <div className={styles.wordTable}>
                 <div className={styles.wordTableTitle}>
                     <h1>Список слов</h1>
@@ -161,7 +174,7 @@ function WordTable({ defaultValues }) {
                                 <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="Отмена" /></td>
                             </tr>
                         )}
-                        {words.map((word, index) => (
+                        {wordsStore.words.map((word, index) => (
                             <tr key={index}>
                                 {editableWord === index ? (
                                     <>
@@ -189,6 +202,6 @@ function WordTable({ defaultValues }) {
             </div>
         </div>
     );
-}
+});
 
 export default WordTable;
