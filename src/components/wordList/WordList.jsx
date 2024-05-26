@@ -3,12 +3,12 @@ import WordCard from '../wordCard/WordCard';
 import styles from './wordList.module.css';
 import Button from '../buttons/Button';
 import buttonStyles from '../buttons/Button.module.css';
-import { WordsContext } from '../../wordsContext/WordsContext';
+import wordsStore from '../../stores/wordsStore';
 
 function WordList({ initialIndex }) {
     const [currentIndex, setCurrentIndex] = useState(initialIndex || 0);
     const [wordsLearned, setWordsLearned] = useState([]);
-    const { words } = useContext(WordsContext);
+    const { words } = wordsStore;
 
     const handleNextWord = () => {
         setCurrentIndex((currentIndex) => (currentIndex + 1) % words.length);
