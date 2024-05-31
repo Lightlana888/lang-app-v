@@ -1,8 +1,73 @@
 {
-  "hash": "e7237fe6",
+  "hash": "e1ddbb52",
   "configHash": "0ae77597",
-  "lockfileHash": "e3b0c442",
-  "browserHash": "ab9750d8",
-  "optimized": {},
-  "chunks": {}
+  "lockfileHash": "e0306df5",
+  "browserHash": "c270ae55",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "557f6d5f",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "329c53b3",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "d46e3495",
+      "needsInterop": false
+    },
+    "mobx-react": {
+      "src": "../../node_modules/mobx-react/dist/mobxreact.esm.js",
+      "file": "mobx-react.js",
+      "fileHash": "3210151a",
+      "needsInterop": false
+    },
+    "mobx": {
+      "src": "../../node_modules/mobx/dist/mobx.esm.js",
+      "file": "mobx.js",
+      "fileHash": "f53326e9",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "f767fe26",
+      "needsInterop": false
+    },
+    "react-icons/gi": {
+      "src": "../../node_modules/react-icons/gi/index.mjs",
+      "file": "react-icons_gi.js",
+      "fileHash": "f1eb86d5",
+      "needsInterop": false
+    },
+    "react-icons/fa": {
+      "src": "../../node_modules/react-icons/fa/index.mjs",
+      "file": "react-icons_fa.js",
+      "fileHash": "73fb1783",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-4ASWBRZ3": {
+      "file": "chunk-4ASWBRZ3.js"
+    },
+    "chunk-5NXQKWCD": {
+      "file": "chunk-5NXQKWCD.js"
+    },
+    "chunk-KP6ZFTZU": {
+      "file": "chunk-KP6ZFTZU.js"
+    },
+    "chunk-O6O4HUXW": {
+      "file": "chunk-O6O4HUXW.js"
+    },
+    "chunk-LQ2VYIYD": {
+      "file": "chunk-LQ2VYIYD.js"
+    }
+  }
 }
