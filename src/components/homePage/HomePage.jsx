@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 //import AuthApp from './input';
 //import RegistrationForm from './input';
-import WordTable from '../wordTable/WordTable';
+import WordTable from '../wordTable/ui/WordTable';
 import Button from '../buttons/Button';
 import WordList from '../wordList/WordList';
 import styles from './homePage.module.css';
 import buttonStyles from '../buttons/Button.module.css';
 import { Link } from 'react-router-dom';
+
 
 
 function HomePage() {
@@ -51,6 +52,7 @@ function HomePage() {
             )}
 
         </div>
+
     );
 }
 export default HomePage;
