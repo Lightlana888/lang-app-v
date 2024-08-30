@@ -1,6 +1,6 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 
-const baseUrl = 'https://itgirlschool.justmakeit.ru';
+
 
 class WordsStore {
     words = [];
@@ -30,7 +30,7 @@ class WordsStore {
     fetchWords = async () => {
         this.loading = true;
         try {
-            const response = await fetch(`${baseUrl}/api/words`);
+            const response = await fetch(`/api/words`);
             if (!response.ok) {
                 throw new Error('Something went wrong ...');
             }
@@ -51,12 +51,17 @@ class WordsStore {
 
     addWord = async (newWord) => {
         try {
-            const response = await fetch(`${baseUrl}/api/words/add`, {
+            const response = await fetch(`/api/words/add`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(newWord),
+                body: JSON.stringify({
+                    english: newWord.english,
+                    transcription: newWord.transcription,
+                    russian: newWord.russian,
+                    tags: newWord.tags
+                }),
             });
             if (!response.ok) {
                 throw new Error('Failed to add word');
@@ -77,7 +82,7 @@ class WordsStore {
 
     updateWord = async (id, updatedWord) => {
         try {
-            const response = await fetch(`${baseUrl}/api/words/${updatedWord.id}/update`, {
+            const response = await fetch(`/api/words/${updatedWord.id}/update`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -105,7 +110,7 @@ class WordsStore {
 
     deleteWord = async (id) => {
         try {
-            const response = await fetch(`${baseUrl}/api/words/${id}/delete`, {
+            const response = await fetch(`/api/words/${id}/delete`, {
                 method: 'POST',
             });
             if (!response.ok) {
