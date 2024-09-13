@@ -1,0 +1,25 @@
+.footer {
+    width: 90vw;
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    font-size: 34px;
+    font-style: italic;
+    border: 4px solid var(--accent-color);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.logoLink:hover {
+    background-color: var(--main-color);
+}

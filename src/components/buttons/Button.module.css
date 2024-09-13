@@ -1,0 +1,165 @@
+@import '../../assets/theme.module.css';
+
+
+/* Стили кнопок */
+.addButton,
+.editButton,
+.deleteButton,
+.saveButton,
+.cancelButton,
+.checkButton {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    transition: background-color 0.3s ease;
+
+}
+
+.saveButton:disabled {
+    color: #303030;
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+.saveButton:disabled:hover {
+
+    background-color: #f5f5f5;
+}
+
+
+.addButton {
+    background-color: var(--accent-color);
+    width: 23rem;
+    height: 3rem;
+    font-size: 22px;
+    margin-right: 2rem;
+}
+
+.addButton:hover {
+    background-color: var(--secondary-color);
+}
+
+.editButton,
+.saveButton {
+    background-color: var(--primary-color);
+}
+
+.editButton:hover,
+.saveButton:hover {
+    background-color: var(--secondary-color);
+}
+
+.deleteButton,
+.cancelButton {
+    background-color: var(--secondary-color);
+}
+
+.deleteButton:hover,
+.cancelButton:hover {
+    background-color: var(--primary-color);
+}
+
+.checkButton {
+    background-color: var(--primary-color);
+    width: 90%;
+    height: 5rem;
+    margin: 10px 10px;
+    align-self: center;
+    font-size: 30px;
+}
+
+.buttonPrev,
+.buttonNext {
+    width: 70px;
+    height: 70px;
+}
+
+.buttonPrev:hover,
+.buttonNext:hover,
+.checkButton:hover {
+    background-color: var(--accent-color);
+}
+
+.checkButton:focus {
+    outline: none;
+    animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: var(--accent-color);
+
+    }
+
+    100% {
+        background-color: var(--primary-color);
+
+    }
+}
+
+.addButton:active,
+.editButton:active,
+.deleteButton:active,
+.saveButton:active,
+.cancelButton:active,
+.buttonPrev:active,
+.buttonNext:active,
+.checkButton:active,
+.buttonPlay:active,
+.buttonList:active {
+    transform: scale(0.95);
+}
+
+.buttonPrev {
+    margin-right: 5rem;
+    margin-left: 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.buttonNext {
+    margin-left: 5rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.buttonPlay,
+.buttonList {
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 25rem;
+    height: 4rem;
+    margin: 15rem;
+    transition: background-color 0.3s ease;
+    font-size: 28px;
+    border: 4px solid var(--accent-color);
+    align-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.buttonPlay:hover,
+.buttonList:hover {
+    color: var(--secondary-color);
+    border-radius: 10px;
+
+}
+
+.buttonPlay:focus,
+.buttonList:focus {
+    outline: 4px auto var(--secondary-color);
+}

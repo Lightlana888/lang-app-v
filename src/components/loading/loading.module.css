@@ -1,0 +1,301 @@
+.loadingText {
+    font-size: 112px;
+    color: var(--accent-color);
+    text-wrap: nowrap;
+
+}
+
+.csscssloadLoadFrame {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    height: 450px;
+    margin: auto;
+    display: box;
+    display: -o-box;
+    display: -ms-box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    flex-flow: row wrap;
+    -o-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    justify-content: center;
+}
+
+.cssloadDot {
+    width: 50px;
+    height: 50px;
+}
+
+.cssloadDot:nth-child(1) {
+    background: rgb(255, 255, 255);
+    animation: cssloadLoad 0.35s linear -0.12s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.12s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.12s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.12s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.12s infinite alternate;
+}
+
+.cssloadDot:nth-child(2) {
+    background: rgb(186, 116, 207);
+    animation: cssloadLoad 0.35s linear -0.23s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.23s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.23s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.23s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.23s infinite alternate;
+}
+
+.cssloadDot:nth-child(3) {
+    background: rgb(255, 255, 255);
+    animation: cssloadLoad 0.35s linear -0.35s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.35s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.35s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.35s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.35s infinite alternate;
+}
+
+.cssloadDot:nth-child(4) {
+    background: rgb(169, 87, 202);
+    animation: cssloadLoad 0.35s linear -0.46s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.46s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.46s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.46s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.46s infinite alternate;
+}
+
+.cssloadDot:nth-child(5) {
+    background: rgb(163, 32, 223);
+    animation: cssloadLoad 0.35s linear -0.58s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.58s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.58s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.58s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.58s infinite alternate;
+}
+
+.cssloadDot:nth-child(6) {
+    background: rgb(160, 29, 221);
+    animation: cssloadLoad 0.35s linear -0.69s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.69s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.69s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.69s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.69s infinite alternate;
+}
+
+.cssloadDot:nth-child(7) {
+    background: rgb(179, 32, 223);
+    animation: cssloadLoad 0.35s linear -0.81s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.81s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.81s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.81s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.81s infinite alternate;
+}
+
+.cssloadDot:nth-child(8) {
+    background: rgb(250, 249, 250);
+    animation: cssloadLoad 0.35s linear -0.92s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -0.92s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -0.92s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -0.92s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -0.92s infinite alternate;
+}
+
+.cssloadDot:nth-child(9) {
+    background: rgb(223, 32, 207);
+    animation: cssloadLoad 0.35s linear -1.04s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.04s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.04s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.04s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.04s infinite alternate;
+}
+
+.cssloadDot:nth-child(10) {
+    background: rgb(163, 23, 190);
+    animation: cssloadLoad 0.35s linear -1.15s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.15s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.15s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.15s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.15s infinite alternate;
+}
+
+.cssloadDot:nth-child(11) {
+    background: rgb(217, 59, 238);
+    animation: cssloadLoad 0.35s linear -1.27s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.27s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.27s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.27s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.27s infinite alternate;
+}
+
+.cssloadDot:nth-child(12) {
+    background: rgb(151, 21, 238);
+    animation: cssloadLoad 0.35s linear -1.38s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.38s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.38s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.38s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.38s infinite alternate;
+}
+
+.cssloadDot:nth-child(13) {
+    background: rgb(235, 34, 218);
+    animation: cssloadLoad 0.35s linear -1.5s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.5s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.5s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.5s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.5s infinite alternate;
+}
+
+.cssloadDot:nth-child(14) {
+    background: rgb(153, 32, 223);
+    animation: cssloadLoad 0.35s linear -1.61s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.61s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.61s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.61s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.61s infinite alternate;
+}
+
+.cssloadDot:nth-child(15) {
+    background: rgb(182, 30, 228);
+    animation: cssloadLoad 0.35s linear -1.73s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.73s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.73s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.73s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.73s infinite alternate;
+}
+
+.cssloadDot:nth-child(16) {
+    background: rgb(254, 253, 255);
+    animation: cssloadLoad 0.35s linear -1.84s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.84s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.84s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.84s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.84s infinite alternate;
+}
+
+.cssloadDot:nth-child(17) {
+    background: #a320df;
+    animation: cssloadLoad 0.35s linear -1.96s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -1.96s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -1.96s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -1.96s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -1.96s infinite alternate;
+}
+
+.cssloadDot:nth-child(18) {
+    background: #9320df;
+    animation: cssloadLoad 0.35s linear -2.07s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.07s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.07s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.07s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.07s infinite alternate;
+}
+
+.cssloadDot:nth-child(19) {
+    background: #b320df;
+    animation: cssloadLoad 0.35s linear -2.19s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.19s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.19s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.19s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.19s infinite alternate;
+}
+
+.cssloadDot:nth-child(20) {
+    background: #a320df;
+    animation: cssloadLoad 0.35s linear -2.3s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.3s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.3s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.3s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.3s infinite alternate;
+}
+
+.cssloadDot:nth-child(21) {
+    background: #9829f3;
+    animation: cssloadLoad 0.35s linear -2.42s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.42s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.42s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.42s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.42s infinite alternate;
+}
+
+.cssloadDot:nth-child(22) {
+    background: #8920df;
+    animation: cssloadLoad 0.35s linear -2.53s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.53s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.53s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.53s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.53s infinite alternate;
+}
+
+.cssloadDott:nth-child(23) {
+    background: #8920df;
+    animation: cssloadLoad 0.35s linear -2.65s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.65s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.65s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.65s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.65s infinite alternate;
+}
+
+.cssloadDot:nth-child(24) {
+    background: #9320df;
+    animation: cssloadLoad 0.35s linear -2.76s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.76s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.76s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.76s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.76s infinite alternate;
+}
+
+.cssloadDott:nth-child(25) {
+    background: #fefdff;
+    animation: cssloadLoad 0.35s linear -2.88s infinite alternate;
+    -o-animation: cssloadLoad 0.35s linear -2.88s infinite alternate;
+    -ms-animation: cssloadLoad 0.35s linear -2.88s infinite alternate;
+    -webkit-animation: cssloadLoad 0.35s linear -2.88s infinite alternate;
+    -moz-animation: cssloadLoad 0.35s linear -2.88s infinite alternate;
+}
+
+
+
+@keyframes cssloadLoad {
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@-o-keyframes cssloadLoad {
+    100% {
+        opacity: 0;
+        -o-transform: scale(0.5);
+    }
+}
+
+@-ms-keyframes cssloadLoad {
+    100% {
+        opacity: 0;
+        -ms-transform: scale(0.5);
+    }
+}
+
+@-webkit-keyframes cssloadLoad {
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.5);
+    }
+}
+
+@-moz-keyframes cssloadLoad {
+    100% {
+        opacity: 0;
+        -moz-transform: scale(0.5);
+    }
+}
