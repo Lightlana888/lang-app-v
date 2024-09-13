@@ -35,7 +35,7 @@ function WordCard({ word, onCheckButtonClick }) {
                         </div>
                         {showTranslation
                             ? (<div className={styles.translation}>{word.russian.charAt(0).toUpperCase() + word.russian.slice(1)}</div>)
-                            : (<Button ref={translationButtonRef} className={buttonStyles.checkButton} onClick={handleShowTranslation} buttonText="Проверить"></Button>)}
+                            : (<Button ref={translationButtonRef} className={buttonStyles.checkButton} onClick={handleShowTranslation} buttonText="CHECK"></Button>)}
                     </motion.div>
                 </>
             )}

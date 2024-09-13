@@ -13,7 +13,7 @@ function Footer() {
             <Link to="/" onClick={handleClick} className={styles.logoLink}>
                 <img src={logo} alt="Логотип" className={styles.logo} />
             </Link>
-            <div>Подписывайся! Будем рады каждому!</div>
+            <div>Follow us here!</div>
             <Contacts />
         </footer>
     );

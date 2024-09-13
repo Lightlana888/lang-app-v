@@ -45,7 +45,7 @@ function WordList({ initialIndex }) {
                     onCheckButtonClick={incrementWordsLearned}
                 />
                 <Button className={buttonStyles.buttonNext} onClick={handleNextWord} buttonText="→"></Button>
-                <div className={styles.wordsklearnedContainer}>Изучено слов: <span className={styles.wordsklearnedCounter}>{wordsLearned.length}</span></div>
+                <div className={styles.wordsklearnedContainer}>Words learned: <span className={styles.wordsklearnedCounter}>{wordsLearned.length}</span></div>
             </div >
         </>
     );

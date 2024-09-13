@@ -24,7 +24,7 @@ function Menu() {
         <div className={styles.menuContainer}>
             <div className={styles.menuHeader} onClick={toggleMenu}>
                 <GiHamburgerMenu style={{ marginTop: '10px' }} />
-                <span className={styles.menuHeaderText} onClick={toggleMenu}>Меню</span>
+                <span className={styles.menuHeaderText} onClick={toggleMenu}>Menu</span>
             </div>
             <motion.div
                 className={`${styles.menu} ${isOpen ? styles.open : ''}`}
@@ -32,9 +32,9 @@ function Menu() {
                 animate={{ opacity: isOpen ? 1 : 0 }}
                 transition={{ duration: 1 }}
             >
-                <Link to="/" onClick={closeMenu}>Главная</Link>
-                <Link to="/list" onClick={closeMenu}>Список слов</Link>
-                <Link to="/game" onClick={closeMenu}>Играть</Link>
+                <Link to="/" onClick={closeMenu}>Home Page</Link>
+                <Link to="/list" onClick={closeMenu}>Words List</Link>
+                <Link to="/game" onClick={closeMenu}>Play</Link>
             </motion.div>
         </div>
     );

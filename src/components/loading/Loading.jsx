@@ -5,7 +5,7 @@ const Loading = () => {
     return (
         <>
             <div className={styles.csscssloadLoadFrame}>
-                <div className={styles.loadingText}>Идёт загрузка...</div>
+                <div className={styles.loadingText}>Loading...</div>
                 <div className={styles.cssloadDot}></div>
                 <div className={styles.cssloadDot}></div>
                 <div className={styles.cssloadDot}></div>

@@ -92,7 +92,7 @@ const WordTable = observer(() => {
                 [field]: value
             }));
         } else {
-            alert(`Некорректные символы в поле ${field} Пожалуйста, введите корректные символы`);
+            alert(`Invalid characters in the ${field} field. Please enter valid characters.`);
             return;
         }
 
@@ -101,23 +101,30 @@ const WordTable = observer(() => {
 
     const handleSaveNewWordClick = () => {
         updateEmptyFields();
-        if (!newWord.english || !newWord.transcription || !newWord.russian || !newWord.tags) {
+
+
+        if (!newWord.english || !newWord.russian) {
             setSaveButtonDisabled(true);
-            console.log("Some fields are empty!");
+            console.log("Some required fields are empty!");
         } else {
-            wordsStore.addWord(newWord)
+
+            const wordToSave = {
+                english: newWord.english,
+                russian: newWord.russian,
+                ...(newWord.transcription && { transcription: newWord.transcription }),
+                ...(newWord.tags && { tags: newWord.tags })
+            };
+
+            wordsStore.addWord(wordToSave)
                 .then(() => {
                     setSaveButtonDisabled(false);
-                    console.log("New word saved successfully:", newWord);
+                    console.log("New word saved successfully:", wordToSave);
                     setShowNewWordRow(false);
                     setNewWord({});
-                })
-                .catch(error => {
-                    console.log('Failed to save new word:', newWord);
-                    setSaveButtonDisabled(true);
                 });
         }
     };
+
 
 
     return (
@@ -125,17 +132,17 @@ const WordTable = observer(() => {
 
             <div className={styles.wordTable}>
                 <div className={styles.wordTableTitle}>
-                    <h1>Список слов</h1>
-                    <Button className={buttonStyles.addButton} onClick={handleAddClick} buttonText="Добавить слово" />
+                    <h1>Your Words List</h1>
+                    <Button className={buttonStyles.addButton} onClick={handleAddClick} buttonText="Add new word" />
                 </div>
                 <table>
                     <thead>
                         <tr>
-                            <th>Английское слово</th>
-                            <th>Транскрипция</th>
-                            <th>Русское слово</th>
-                            <th>Теги</th>
-                            <th colSpan="2">Действия</th>
+                            <th>English word</th>
+                            <th>Transcription</th>
+                            <th>Russian word</th>
+                            <th>Tags</th>
+                            <th colSpan="2">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -170,8 +177,8 @@ const WordTable = observer(() => {
                                     value={newWord?.tags || ''}
                                     onChange={(e) => handleChangeClick(e, 'tags')} />
                                 </td>
-                                <td><Button className={buttonStyles.saveButton} onClick={handleSaveNewWordClick} buttonText="Сохранить" disabled={saveButtonDisabled} /></td>
-                                <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="Отмена" /></td>
+                                <td><Button className={buttonStyles.saveButton} onClick={handleSaveNewWordClick} buttonText="SAVE" disabled={saveButtonDisabled} /></td>
+                                <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="CANCEL" /></td>
                             </tr>
                         )}
                         {wordsStore.words.map((word, index) => (
@@ -182,8 +189,8 @@ const WordTable = observer(() => {
                                         <td><input value={newWord.transcription} onChange={(e) => handleChangeClick(e, 'transcription')} /></td>
                                         <td><input value={newWord.russian} onChange={(e) => handleChangeClick(e, 'russian')} /></td>
                                         <td><input value={newWord.tags} onChange={(e) => handleChangeClick(e, 'tags')} /></td>
-                                        <td><Button className={buttonStyles.saveButton} onClick={() => handleSaveClick(index)} buttonText="Сохранить" /></td>
-                                        <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="Отмена" /></td>
+                                        <td><Button className={buttonStyles.saveButton} onClick={() => handleSaveClick(index)} buttonText="SAVE" /></td>
+                                        <td><Button className={buttonStyles.cancelButton} onClick={handleCancelClick} buttonText="CANCEL" /></td>
                                     </>
                                 ) : (
                                     <>
@@ -191,8 +198,8 @@ const WordTable = observer(() => {
                                         <td>{word.transcription}</td>
                                         <td>{word.russian}</td>
                                         <td>{word.tags}</td>
-                                        <td><Button className={buttonStyles.editButton} onClick={() => handleEditClick(index)} buttonText="Редактировать" /></td>
-                                        <td><Button className={buttonStyles.deleteButton} onClick={() => handleDeleteClick(word.id)} buttonText="Удалить" /></td>
+                                        <td><Button className={buttonStyles.editButton} onClick={() => handleEditClick(index)} buttonText="EDIT" /></td>
+                                        <td><Button className={buttonStyles.deleteButton} onClick={() => handleDeleteClick(word.id)} buttonText="DELETE" /></td>
                                     </>
                                 )}
                             </tr>

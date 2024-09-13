@@ -11,9 +11,9 @@ function Header() {
     return (
         <header className={styles.header}>
             <Link to="/" onClick={handleClick} className={styles.logoLink}>
-                <img src={logo} alt="Логотип" className={styles.logo} />
+                <img src={logo} alt="Logo" className={styles.logo} />
             </Link>
-            <div>Раскрой свой потенциал слово за словом!</div>
+            <div>Expand Your Vocabulary, Step by Step!</div>
             <Menu />
         </header>
     );

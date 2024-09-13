@@ -46,8 +46,8 @@ function HomePage() {
             {showWordTable && <WordTable />}
             {!showWordList && !showWordTable && (
                 <>
-                    <Link to="/game" className={buttonStyles.buttonPlay} onClick={handlePlayButtonClick}>Играть</Link>
-                    <Link to="/list" className={buttonStyles.buttonList} onClick={handleWordListButtonClick}>Список слов</Link>
+                    <Link to="/game" className={buttonStyles.buttonPlay} onClick={handlePlayButtonClick}>PLAY</Link>
+                    <Link to="/list" className={buttonStyles.buttonList} onClick={handleWordListButtonClick}>YOUR WORDS LIST</Link>
                 </>
             )}
 
